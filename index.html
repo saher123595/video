@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Full Screen Video Toggle</title>
+    <link href="MaterialDesign-Webfont-master/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+    <div class="body">
+        <div class="change">
+            <button data-src="1.mp4">video 1</button>
+            <button data-src="videos/1.mp4">video 2</button>
+            <button data-src="videos/2.mp4">video 3</button>
+        </div>
+
+
+        <figure class="vidFrame">
+            <video id="vid1" class="vid" src="1.mp4"></video>
+            <figcaption class="vidBar">
+                <input type="range" value="0" id="range2" />
+                <div class="d-flex">
+                    <div class="d">
+                        <button id="playPause" class="mdi mdi-play play" title="Play/Pause Video"></button>
+                        <div class="voluem">
+                            <i id="volume" class="mdi mdi-volume-high"></i>
+                            <input type="range" max="10" value="10" id="range" />
+                        </div>
+                        <time id="time"></time>
+                    </div>
+                    <div class="other-2 d">
+                        <button id="speed" class="button" title="Enter/Exit Full Screen">
+              <i class="mdi mdi-cog" aria-hidden="true"></i>
+              <ul>
+                <li>
+                  <span>سرعة التشغيل</span>
+                  <i class="mdi mdi-chevron-left" aria-hidden="true" dir="ltr">عادي</i>
+                  <ul>
+                    <li data-speed=".25">.25</li>
+                    <li data-speed=".50">.50</li>
+                    <li data-speed=".75">.75</li>
+                    <li data-speed="1">عادي</li>
+                    <li data-speed="1.25">1.25</li>
+                    <li data-speed="1.50">1.50</li>
+                    <li data-speed="1.75">1.75</li>
+                    <li data-speed="2">2</li>
+                  </ul>
+                </li>
+              </ul>
+            </button>
+                        <button id="fullScreen" class="on mdi mdi-fullscreen" title="Enter/Exit Full Screen"></button>
+                    </div>
+                </div>
+            </figcaption>
+        </figure>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

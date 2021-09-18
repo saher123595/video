@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    width: 80%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.change {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.change button {
+    width: 90%;
+    height: 40px;
+    margin: 5px 0;
+    background-color: #e91e63;
+    color: #FFF;
+    border: 0;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+figure {
+    background: #000;
+    width: 75%;
+    height: 400px;
+    position: relative;
+    margin-left: auto;
+    overflow: hidden;
+}
+
+figure video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 200;
+}
+
+figure video.Notactive {
+    display: none;
+}
+
+figure:hover figcaption {
+    bottom: 0;
+}
+
+figcaption {
+    position: absolute;
+    bottom: -100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff !important;
+    transition: 0.2s;
+    background: #000;
+    z-index: 100000;
+}
+
+figcaption time {
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figcaption>input {
+    width: 100%;
+}
+
+figcaption>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff !important;
+    transition: 0.2s;
+}
+
+button.play,
+button.pause {
+    width: 47px;
+    height: 41px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 0;
+    color: #FFF;
+    font-size: 35px;
+}
+
+button.on,
+button.off {
+    width: 47px;
+    height: 41px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 0;
+    color: #FFF;
+    font-size: 35px;
+}
+
+.d {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+figcaption div.voluem {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 25px;
+    margin-left: 10px;
+    white-space: nowrap;
+    width: 32px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+figcaption div.voluem i {
+    margin-right: 12px;
+    font-size: 25px;
+}
+
+figcaption div.voluem input {
+    width: 161px;
+}
+
+figcaption div.voluem:hover {
+    width: 200px;
+}
+
+figcaption .button {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 0;
+    color: #fff;
+    font-size: 25px;
+    margin-right: 10px;
+    position: relative;
+}
+
+figcaption .button>ul {
+    position: absolute;
+    bottom: 63px;
+    background: #e91e63;
+    width: 200px;
+    left: -161px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+    opacity: 0;
+    z-index: -200;
+    transition: 0.5s;
+}
+
+figcaption .button>ul.active {
+    z-index: 5000;
+    opacity: 1;
+}
+
+figcaption .button>ul li {
+    height: 40px;
+    width: 100% !important;
+    text-align: right;
+    direction: rtl;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+figcaption .button>ul li ul {
+    position: absolute;
+    bottom: 41px;
+    background: #e91e63;
+    width: 100%;
+    height: 0;
+    left: 0;
+    list-style: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 0;
+    overflow: auto;
+    transition: 0.5s;
+}
+
+figcaption .button>ul li ul li {
+    height: 40px;
+    width: 100% !important;
+    padding: 15px;
+    transition: 0.5s;
+}
+
+figcaption .button>ul li ul.active {
+    height: 200px;
+}
+
+figcaption .button>ul li ul li:hover {
+    background-color: #000;
+}
+
+.fa-chevron-left:before {
+    content: "\f053";
+    margin-right: 10px;
+}
+
+@media (max-width:1000px) {
+    .body {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .body figure {
+        width: 100%;
+    }
+    .change {
+        margin: 10px auto !important;
+    }
+}
