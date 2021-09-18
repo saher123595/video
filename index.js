@@ -151,7 +151,7 @@ window.onkeydown = function(event) {
     } else if (x == 96) {
         video.currentTime = 0;
     } else if (x == 13) {
-        if (video.src == "file:///G:/1-website/%D9%85%D9%87%D9%85/%D8%AA%D8%AC%D8%A7%D8%B1%D8%A8/video/1.mp4") {
+        if (video.src == "1.mp4") {
             video.src = "videos/2.mp4";
         } else {
             video.src = "1.mp4";
